@@ -9,29 +9,57 @@
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet"> 
     <meta name="description" content="Portafolio web moderno con navbar, footer, banner de cookies y flexbox">
     <link rel="stylesheet" href="src/css/style.css">
+    <script src="src/js/main.js"></script>
 </head>
 <body>
+    <a class="skip-link" href="#contenido">Saltar contenido</a>
     <!-- Aqui va navbar, footer y banner de cookies -->
     <!-- Navbar en header -->
-    <header class="site-header">
-        <nav class="navbar">
-            <a href="#inicio" class="nav__logo">
+    <header class="site-header" id="top">
+        <nav class="navbar container" aria-label="Navegacion principal">
+            <a href="#inicio" class="nav__logo" aria-label="Ir a inicio">
                 <img src="src/img/logo.png" alt="logo de Alfredo" />
-                <span>Alfredo.dev</span>
+                <span>Alfredo<span class="brand-dot">.dev</span></span>
             </a>
-            <ul class="nav__menu">
+          <div class="nav__actions">
+              <ul class="nav__menu">
                 <li><a href="#inicio" class="nav-link">Inicio</a></li>
                 <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
                 <li><a href="#sobre-mi" class="nav-link">Sobre mi</a></li>
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
             </ul>
-            <a href="#contacto" class="nav__cta">Hablemos</a>
+            <a href="#contacto" class="nav__cta">
+                <span class="icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                        <path d="M21 8l-9 6L3 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                Hablemos
+            </a>
+            <button class="nav_toggle" id="navToggle"
+            aria-expanded="false" aria-controls="mobilePanel"
+            aria-label="Abrir menu">
+            <span class="sr-only">Abrir menu</span>
+            <span class="burger" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="nav__panel" id="mobilePanel" hidden>
+            <ul class="nav__panelList">
+                <li><a href="#inicio" class="panel-link">Inicio</a></li>
+                <li><a href="#proyectos" class="panel-link">Proyectos</a></li>
+                <li><a href="#sobre-mi" class="panel-link">Sobre mi</a></li>
+                <li><a href="#contacto" class="panel-link">Contacto</a></li>
+                <li class="panel-divider"></li>
+                <li><a class="panel-cta" href="#contacto">Hablemos</a></li>
+            </ul>
+
+          </div>
         </nav>
     </header>
 
 
     <!-- Contenido principal-->
-     <main>
+     <main id="contenido">
         <!-- Hero/banner para tener mi contenido principal -->
         <section id="inicio" class="hero">
             <h1>Hola soy Alfredo Age</h1>
