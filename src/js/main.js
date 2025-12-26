@@ -1,14 +1,14 @@
 const navToggle = document.querySelector("#navToggle");
-const movilePanel = document.querySelector("#movilePanel");
+const mobilePanel = document.querySelector("#mobilePanel");
 
 function closeMenu(){
     navToggle.setAttribute("aria-expanded", "false");
-    movilePanel.hidden= true;
+    mobilePanel.hidden= true;
 }
 
 function openMenu(){
     navToggle.setAttribute("aria-expanded", "true");
-    movilePanel.hidden= false;
+    mobilePanel.hidden= false;
 }
 
 
